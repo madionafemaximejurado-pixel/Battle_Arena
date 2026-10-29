@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace BattleArena.Enums
 {
-    internal class WarriorType
+    public enum WarriorType
     {
+        Fighter,
+        Marksman,
+        Tank,
+        Magery,
     }
 }

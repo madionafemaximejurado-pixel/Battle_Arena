@@ -1,11 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace BattleArena.Warriors
 {
     public class Tank : Warrior
     {
-        public int Shield { get; private set; }
+        public int Shield;
         public Tank(string name, int health, int attackPower, int shield)
             : base(name, health, attackPower)
         {
@@ -16,20 +20,18 @@ namespace BattleArena.Warriors
         {
             var totalDamage = target.AttackPower - Shield;
             TakeDamage(totalDamage);
-            Console.WriteLine($"->{Name}: Lasapin mo yakap ko {target.Name}!");
-
+            Console.WriteLine($"\t->{Name}: ewan {target.Name}!");
             Thread.Sleep(1000);
-            Console.WriteLine($"->{target.Name}: Hug me tight {Name}!");
-
+            Console.WriteLine($"\t->{target.Name}: raahh ");
             Thread.Sleep(1000);
             if (target.IsAlive)
-                Console.WriteLine($"->{target.Name}: Kulang pa sa hug bebe {Name}");
-
+                Console.WriteLine($"\t->{target.Name}: yown! ");
             Thread.Sleep(1000);
-            Console.WriteLine($"\t------ {target.Name} ------");
-            Console.WriteLine($"\t   * Damage Taken: {totalDamage}");
-            Console.WriteLine($"\t   * Health Remaining: {target.Health}");
-        }
-    }
+            Console.WriteLine($"\t------- {target.Name} ------");
+            Console.WriteLine($"\t    * DamageTaken: {totalDamage}");
+            Console.WriteLine($"\t    * Health Remaining: {target.Health}");
 
+        }
+
+    }
 }

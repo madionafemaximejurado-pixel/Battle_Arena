@@ -3,16 +3,16 @@ using BattleArena.Enums;
 using System;
 using System.Threading;
 
-namespace BattleArena.Warriors
+namespace BattleArena.Warriors.Characters
 {
     public class Raymond : Warrior
     {
         public int DuraDamage { get; private set; }
-        public Raymond(int health, int attackPower, int duraDamage, TeamType teamType)
-            : base("Raymond", health, attackPower, WarriorType.Marksman, teamType)
+        public Raymond(int health, int attackPower, int speed, int duraDamage, TeamType teamType) 
+            : base("Raymond", health, attackPower, speed, WarriorType.Marksman, teamType)
         {
             DuraDamage = duraDamage;
-            attackPower += DuraDamage;
+            attackPower += DuraDamage; 
         }
 
         public override void Attack(Warrior target)
@@ -27,8 +27,12 @@ namespace BattleArena.Warriors
 
             Thread.Sleep(1000);
             if (target.IsAlive)
-                Console.WriteLine($"->{target.Name}: Buhay pa ko babe {target.Name}");
+                 Console.WriteLine($"->{target.Name}: Buhay pa ko babe {target.Name}");
         }
     }
 
 }
+
+
+
+

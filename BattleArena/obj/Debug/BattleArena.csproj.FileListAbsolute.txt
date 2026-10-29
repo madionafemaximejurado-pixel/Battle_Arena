@@ -1,0 +1,6 @@
+C:\Users\LAB\Desktop\battlearena\BattleArena\BattleArena\bin\Debug\BattleArena.exe.config
+C:\Users\LAB\Desktop\battlearena\BattleArena\BattleArena\obj\Debug\BattleArena.csprojResolveAssemblyReference.cache
+C:\Users\LAB\Desktop\battlearena\BattleArena\BattleArena\bin\Debug\BattleArena.exe
+C:\Users\LAB\Desktop\battlearena\BattleArena\BattleArena\bin\Debug\BattleArena.pdb
+C:\Users\LAB\Desktop\battlearena\BattleArena\BattleArena\obj\Debug\BattleArena.exe
+C:\Users\LAB\Desktop\battlearena\BattleArena\BattleArena\obj\Debug\BattleArena.pdb

@@ -4,14 +4,14 @@ using BattleArena.Enums;
 using System;
 using System.Threading;
 
-namespace BattleArena.Warriors
+namespace BattleArena.Warriors.Characters
 {
     public class Kirk : Warrior, IDefender
     {
-        public int Shield { get; private set; }
+        public int Shield  { get; private set; }
 
-        public Kirk(int health, int attackPower, int shield, TeamType teamType)
-            : base("Kirk", health, attackPower, WarriorType.Tank, teamType)
+        public Kirk(int health, int attackPower, int speed, int shield, TeamType teamType) 
+            : base("Kirk", health, attackPower, speed, WarriorType.Tank, teamType)
         {
             Shield = shield;
         }
@@ -36,7 +36,7 @@ namespace BattleArena.Warriors
             var newActualDamage = damage.TotalAmountDamage - Shield;
 
             var blockChance = _random.Next(0, 100);
-            var isBlocked = blockChance < 50;
+            var isBlocked =  blockChance < 50;
             _damageTaken = damage;
 
             if (isBlocked) Block();

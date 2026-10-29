@@ -1,4 +1,5 @@
-﻿using BattleArena.Warriors;
+﻿using BattleArena.Enums;
+using BattleArena.Warriors;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,8 +8,10 @@ using System.Threading.Tasks;
 
 namespace BattleArena.Abilities
 {
-    public interface ISpellCaster
+    public interface IHealCaster
     {
-        void CastSpell(Warrior target);
+        TeamType TeamType { get; }
+
+        void HealTeamMates(List<Warrior> teamMates);
     }
 }

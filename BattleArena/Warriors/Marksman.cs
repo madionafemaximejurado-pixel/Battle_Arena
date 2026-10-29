@@ -1,36 +1,34 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace BattleArena.Warriors
 {
     public class Marksman : Warrior
     {
-        public int ArrowDamage { get; private set; }
+        public int ArrowDamage;
         public Marksman(string name, int health, int attackPower, int arrowDamage)
             : base(name, health, attackPower)
         {
-            ArrowDamage = arrowDamage;
-            attackPower += ArrowDamage;
         }
 
         public override void Attack(Warrior target)
         {
-            var totalDamage = target.AttackPower;
+            var totalDamage = target.AttackPower + ArrowDamage;
             TakeDamage(totalDamage);
-            Console.WriteLine($"->{Name}: Duburaan kita bebe {target.Name}!");
-
+            Console.WriteLine($"\t->{Name}: fire arrow {target.Name}!");
             Thread.Sleep(1000);
-            Console.WriteLine($"->{target.Name}: Need more babe!");
-
+            Console.WriteLine($"\t->{target.Name}: ahh! ");
             Thread.Sleep(1000);
             if (target.IsAlive)
-                Console.WriteLine($"->{target.Name}: Buhay pa ko babe {target.Name}");
-
+                Console.WriteLine($"\t->{target.Name}: savage ");
             Thread.Sleep(1000);
-            Console.WriteLine($"\t------ {target.Name} ------");
-            Console.WriteLine($"\t   * Damage Taken: {totalDamage}");
-            Console.WriteLine($"\t   * Health Remaining: {target.Health}");
+            Console.WriteLine($"\t------- {target.Name} ------");
+            Console.WriteLine($"\t    * DamageTaken: {totalDamage}");
+            Console.WriteLine($"\t    * Health Remaining: {target.Health}");
         }
     }
-
 }

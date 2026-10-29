@@ -46,17 +46,25 @@
     <Compile Include="Abilities\IDefender.cs" />
     <Compile Include="Abilities\IHealable.cs" />
     <Compile Include="Abilities\IHealCaster.cs" />
-    <Compile Include="Abilities\ISellCaster.cs" />
+    <Compile Include="Abilities\ISpellCaster.cs" />
+    <Compile Include="BattleArena.cs" />
+    <Compile Include="Combat\TurnEntry.cs" />
     <Compile Include="Enums\TeamType.cs" />
     <Compile Include="Enums\WarriorType.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Warriors\Characters\Jack.cs" />
+    <Compile Include="Warriors\Characters\Jhen.cs" />
+    <Compile Include="Warriors\Characters\Mina.cs" />
+    <Compile Include="Warriors\Characters\Shad.cs" />
+    <Compile Include="Warriors\Characters\Tina.cs" />
+    <Compile Include="Warriors\Characters\Tom.cs" />
+    <Compile Include="Warriors\Characters\yagyagan.cs" />
     <Compile Include="Combat\DamageInfo.cs" />
-    <Compile Include="Warriors\Characters\Agoot.cs" />
     <Compile Include="Warriors\Characters\Muhat.cs" />
-    <Compile Include="Warriors\Characters\Kirk.cs" />
     <Compile Include="Warriors\Characters\Raymond.cs" />
-    <Compile Include="Warriors\Characters\Warrior.cs" />
+    <Compile Include="Warriors\Characters\Kirk.cs" />
+    <Compile Include="Warriors\Warrior.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
